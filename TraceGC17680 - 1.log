@@ -1,0 +1,34 @@
+
+
+===========================================================================================
+			Grupo Castilla - Traceado de Sentencias SQL
+===========================================================================================
+Información general
+	Fabricante: ORACLE7
+	DSN: epsilon
+	UID: epsilon
+	Hora apertura conexión: 29/09/2021 10:09:21
+-------------------------------------------------------------------------------------------
+
+
+[RRHH - 29/09/2021 10:09:21] 
+29/09/2021 10:09:22 [*000000000] [r--] SELECT USID FROM GR_USR WHERE ID_GR_USR='05'
+>>>>> Tiempo Empleado: >>>>>  [16] 
+29/09/2021 10:09:22 [*000000001] [r--] SELECT usid, pwd FROM gr_usr WHERE 1=1
+>>>>> Tiempo Empleado: >>>>>  [15] 
+29/09/2021 10:09:22 [*000000002] [--x] delete from PAS.tftra
+>>>>> Tiempo Empleado: >>>>>  [781] 
+29/09/2021 10:09:23 [*000000003] [--x] insert into PAS.tftra (id_empresa, id_trabajador, id_secuencia) SELECT distinct ET.id_empresa, ET.id_trabajador, ET.id_secuencia FROM PAS.TFEmp FE,PAS.tftra_Aux FT,epsilon.trabajadores ET,PAS.TFCon FC WHERE FE.id_empresa = FT.C1 and FT.C1 = ET.id_empresa and FT.C2 = ET.id_trabajador and FT.C3 = ET.id_secuencia and ET.id_convenio = FC.id_convenio
+>>>>> Tiempo Empleado: >>>>>  [422] 
+29/09/2021 10:09:23 [*000000004] [--x] delete from PDI.tftra
+>>>>> Tiempo Empleado: >>>>>  [516] 
+29/09/2021 10:09:24 [*000000005] [--x] insert into PDI.tftra (id_empresa, id_trabajador, id_secuencia) SELECT distinct ET.id_empresa, ET.id_trabajador, ET.id_secuencia FROM PDI.TFEmp FE,PDI.tftra_Aux FT,epsilon.trabajadores ET,PDI.TFCon FC WHERE FE.id_empresa = FT.C1 and FT.C1 = ET.id_empresa and FT.C2 = ET.id_trabajador and FT.C3 = ET.id_secuencia and ET.id_convenio = FC.id_convenio
+>>>>> Tiempo Empleado: >>>>>  [375] 
+29/09/2021 10:09:24 [*000000006] [--x] delete from CAPVI.tftra
+>>>>> Tiempo Empleado: >>>>>  [453] 
+29/09/2021 10:09:25 [*000000007] [--x] insert into CAPVI.tftra (id_empresa, id_trabajador, id_secuencia) SELECT distinct ET.id_empresa, ET.id_trabajador, ET.id_secuencia FROM CAPVI.TFEmp FE,CAPVI.tftra_Aux FT,epsilon.trabajadores ET,CAPVI.TFCon FC WHERE FE.id_empresa = FT.C1 and FT.C1 = ET.id_empresa and FT.C2 = ET.id_trabajador and FT.C3 = ET.id_secuencia and ET.id_convenio = FC.id_convenio
+>>>>> Tiempo Empleado: >>>>>  [547] 
+29/09/2021 10:09:25 [*000000008] [--x] delete from NOLOCK.tftra
+>>>>> Tiempo Empleado: >>>>>  [672] 
+29/09/2021 10:09:26 [*000000009] [--x] insert into NOLOCK.tftra (id_empresa, id_trabajador, id_secuencia) SELECT distinct ET.id_empresa, ET.id_trabajador, ET.id_secuencia FROM NOLOCK.TFEmp FE,NOLOCK.tftra_Aux FT,epsilon.trabajadores ET,NOLOCK.TFCon FC WHERE FE.id_empresa = FT.C1 and FT.C1 = ET.id_empresa and FT.C2 = ET.id_trabajador and FT.C3 = ET.id_secuencia and ET.id_convenio = FC.id_convenio
+>>>>> Tiempo Empleado: >>>>>  [422] 
